@@ -1,0 +1,42 @@
+﻿@model POPSMvcWcfApplication.Models.ItemVM
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ItemVM</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ITCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITRate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.ITCode.Trim() }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7233c4e8-74d4-4005-984d-78b6459775c9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:62066/PopsService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PopsService.xsd" MetadataType="Schema" ID="07966d48-c947-448b-af5b-894368d0e40d" SourceId="1" SourceUrl="http://localhost:62066/PopsService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PopsService1.xsd" MetadataType="Schema" ID="fe7d3982-4b9c-4c0e-b1ff-ba8c5babf5fa" SourceId="1" SourceUrl="http://localhost:62066/PopsService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PopsService2.xsd" MetadataType="Schema" ID="73cf8f19-177f-4f30-a01d-365a6389b8f4" SourceId="1" SourceUrl="http://localhost:62066/PopsService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PopsService.wsdl" MetadataType="Wsdl" ID="4bc2292b-c994-4454-b2c2-3b827ff230a7" SourceId="1" SourceUrl="http://localhost:62066/PopsService.svc?wsdl" />
+    <MetadataFile FileName="PopsService.disco" MetadataType="Disco" ID="208e7fa4-dad5-4947-a5b3-155ca4d278ab" SourceId="1" SourceUrl="http://localhost:62066/PopsService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

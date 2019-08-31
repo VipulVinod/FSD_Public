@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PopsService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:62066/PopsService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:62066/PopsService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:62066/PopsService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/POPSWcfService.Entities" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPopsService_GetItemById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemById" />
+  </wsdl:message>
+  <wsdl:message name="IPopsService_GetItemById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPopsService_AddItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddItem" />
+  </wsdl:message>
+  <wsdl:message name="IPopsService_AddItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPopsService_GetAllItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllItems" />
+  </wsdl:message>
+  <wsdl:message name="IPopsService_GetAllItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPopsService_SaveItemDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveItemDetails" />
+  </wsdl:message>
+  <wsdl:message name="IPopsService_SaveItemDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveItemDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPopsService_GetSupplierById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSupplierById" />
+  </wsdl:message>
+  <wsdl:message name="IPopsService_GetSupplierById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSupplierByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPopsService_AddSuppier_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSuppier" />
+  </wsdl:message>
+  <wsdl:message name="IPopsService_AddSuppier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSuppierResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPopsService_GetAllSuppliers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSuppliers" />
+  </wsdl:message>
+  <wsdl:message name="IPopsService_GetAllSuppliers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSuppliersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPopsService_SaveSupplierDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSupplierDetails" />
+  </wsdl:message>
+  <wsdl:message name="IPopsService_SaveSupplierDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSupplierDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPopsService_GetAllOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOrders" />
+  </wsdl:message>
+  <wsdl:message name="IPopsService_GetAllOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPopsService_GetOrderDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderDetails" />
+  </wsdl:message>
+  <wsdl:message name="IPopsService_GetOrderDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPopsService_AddOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrder" />
+  </wsdl:message>
+  <wsdl:message name="IPopsService_AddOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrderResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPopsService">
+    <wsdl:operation name="GetItemById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPopsService/GetItemById" message="tns:IPopsService_GetItemById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPopsService/GetItemByIdResponse" message="tns:IPopsService_GetItemById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPopsService/AddItem" message="tns:IPopsService_AddItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPopsService/AddItemResponse" message="tns:IPopsService_AddItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPopsService/GetAllItems" message="tns:IPopsService_GetAllItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPopsService/GetAllItemsResponse" message="tns:IPopsService_GetAllItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveItemDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPopsService/SaveItemDetails" message="tns:IPopsService_SaveItemDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPopsService/SaveItemDetailsResponse" message="tns:IPopsService_SaveItemDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplierById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPopsService/GetSupplierById" message="tns:IPopsService_GetSupplierById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPopsService/GetSupplierByIdResponse" message="tns:IPopsService_GetSupplierById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSuppier">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPopsService/AddSuppier" message="tns:IPopsService_AddSuppier_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPopsService/AddSuppierResponse" message="tns:IPopsService_AddSuppier_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSuppliers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPopsService/GetAllSuppliers" message="tns:IPopsService_GetAllSuppliers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPopsService/GetAllSuppliersResponse" message="tns:IPopsService_GetAllSuppliers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSupplierDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPopsService/SaveSupplierDetails" message="tns:IPopsService_SaveSupplierDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPopsService/SaveSupplierDetailsResponse" message="tns:IPopsService_SaveSupplierDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPopsService/GetAllOrders" message="tns:IPopsService_GetAllOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPopsService/GetAllOrdersResponse" message="tns:IPopsService_GetAllOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPopsService/GetOrderDetails" message="tns:IPopsService_GetOrderDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPopsService/GetOrderDetailsResponse" message="tns:IPopsService_GetOrderDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPopsService/AddOrder" message="tns:IPopsService_AddOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPopsService/AddOrderResponse" message="tns:IPopsService_AddOrder_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPopsService" type="tns:IPopsService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetItemById">
+      <soap:operation soapAction="http://tempuri.org/IPopsService/GetItemById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddItem">
+      <soap:operation soapAction="http://tempuri.org/IPopsService/AddItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllItems">
+      <soap:operation soapAction="http://tempuri.org/IPopsService/GetAllItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveItemDetails">
+      <soap:operation soapAction="http://tempuri.org/IPopsService/SaveItemDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplierById">
+      <soap:operation soapAction="http://tempuri.org/IPopsService/GetSupplierById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSuppier">
+      <soap:operation soapAction="http://tempuri.org/IPopsService/AddSuppier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSuppliers">
+      <soap:operation soapAction="http://tempuri.org/IPopsService/GetAllSuppliers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSupplierDetails">
+      <soap:operation soapAction="http://tempuri.org/IPopsService/SaveSupplierDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrders">
+      <soap:operation soapAction="http://tempuri.org/IPopsService/GetAllOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetails">
+      <soap:operation soapAction="http://tempuri.org/IPopsService/GetOrderDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrder">
+      <soap:operation soapAction="http://tempuri.org/IPopsService/AddOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PopsService">
+    <wsdl:port name="BasicHttpBinding_IPopsService" binding="tns:BasicHttpBinding_IPopsService">
+      <soap:address location="http://localhost:62066/PopsService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

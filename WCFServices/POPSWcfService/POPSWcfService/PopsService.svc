@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="POPSWcfService.PopsService" CodeBehind="PopsService.svc.cs" %>
